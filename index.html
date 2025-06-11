@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Quote Generator</title>
+</head>
+<body>
+            <div id="about-section">
+                                    
+            <button onclick="closeAbout()">Close</button> 
+            
+            <br><br><br><br> 
+            <p id="about-text">
+                This is a simple quote generator that provides random quotes from various authors. 
+                <br><br>'About' to learn more about this application.
+                <br><br>Click 'Random Quote' to get a new quote
+                <br><br>'Previous' to go back to the previous quote
+                <br><br>'Next' to see the next quote
+                <br><br>Click 'Close' to hide this section. 
+            </p>
+               <br><br>
+            <a href="github.com/aqibzafeer/">Aqib Zafeer
+</a>
+
+  
+         </div>
+
+<div class="main-container">
+         <div id="quote-container">
+            <p id="quote-id"></p> 
+            <p id="quote-text"></p>
+            <p id="author-text"></p>    
+         </div>
+
+         <div class="button-container">
+            <button onclick="showAbout()">About</button>
+            <button onclick="generateQuote()">Random</button>   
+         </div>
+
+         <div class="button-container">
+            <button onclick="NextQuote()">Next</button>
+            <button onclick="previousQuote()">Previous</button>   
+         </div>
+
+<script src="script.js"></script>
+           
+   <!-- <button onclick="goTop()">⬆</button> -->
+
+</div>
+      </body>
+</html>

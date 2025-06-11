@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  max-width: 600px;
+  min-height: 100vh;
+  /* margin: 0 auto; */
+  padding-top: 20px;
+  background: #007bff;
+}
+
+#quote-container {
+  max-width: 500px;
+  min-height: 350px;
+  padding: 20px;
+  padding-top: 50px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid #007bff;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #f9f9f9;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e0e0e0;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  width: 180px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#about-section {
+  /* max-width: 500px; */
+  /* height: 90vh; */
+  /* margin-top: 30px; */
+  /* margin: auto; */
+  padding: 20px;
+  background: #0056b3;
+  color: white;
+  text-align: center;
+}
+
+#about-section button {
+  background: #e0e0e0;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+#about-section button:hover {
+  color: red;
+}
+
+#about-section a {
+  text-decoration: none;
+  color: yellow;
+  transition: color 0.3s ease;
+}
+
+#about-section a:hover {
+  color: orange;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    padding: 30px 15px;
+  }
+
+  #quote-container {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  #about-section {
+    width: 90%;
+  }
+}
