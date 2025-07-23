@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles.css">
-   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-            <div id="about-section">
-                                    
-            <button onclick="closeAbout()">Close</button> 
-            
-            <br><br><br><br> 
-            <p id="about-text">
-                This is a simple quote generator that provides random quotes from various authors. 
-                <br><br>'About' to learn more about this application.
-                <br><br>Click 'Random Quote' to get a new quote
-                <br><br>'Previous' to go back to the previous quote
-                <br><br>'Next' to see the next quote
-                <br><br>Click 'Close' to hide this section. 
-            </p>
-               <br><br>
-            <a href="github.com/aqibzafeer/">Aqib Zafeer
-</a>
+    <div class="overlay" id="about-overlay">
+        <div class="about-container">
+            <div class="about-header">
+                <h2>About</h2>
+                <button class="close-btn" onclick="closeAbout()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="about-content">
+                <p>Welcome to Quote Generator, your daily dose of motivation! This application provides random inspirational quotes from various authors across history.</p>
+                
+                <div class="feature">
+                    <i class="fas fa-random"></i>
+                    <span>Click 'Random' for a new inspirational quote</span>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>'Previous' to revisit past quotes</span>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>'Next' to see more quotes</span>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/aqibzafeer/" target="_blank">
+                        <i class="fab fa-github"></i> Aqib Zafeer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  
-         </div>
+    <div class="container">
+        <header>
+            <h1>InspireMe</h1>
+            <button class="about-btn" onclick="showAbout()">
+                <i class="fas fa-info-circle"></i>
+            </button>
+        </header>
 
-<div class="main-container">
-         <div id="quote-container">
-            <p id="quote-id"></p> 
-            <p id="quote-text"></p>
-            <p id="author-text"></p>    
-         </div>
+        <main>
+            <div class="quote-card" id="quote-container">
+                <div class="quote-content">
+                    <p id="quote-id" class="quote-number">#001</p>
+                    <p id="quote-text" class="quote-text">Click the button below to get your first inspirational quote!</p>
+                    <p id="author-text" class="quote-author">Quotes</p>
+                </div>
+                <div class="quote-actions">
+                    <button class="btn primary" onclick="generateQuote()">
+                        <i class="fas fa-random"></i> Random
+                    </button>
+                </div>
+            </div>
 
-         <div class="button-container">
-            <button onclick="showAbout()">About</button>
-            <button onclick="generateQuote()">Random</button>   
-         </div>
+            <div class="navigation-buttons">
+                <button class="btn secondary" onclick="previousQuote()">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button class="btn secondary" onclick="nextQuote()">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </main>
+    </div>
 
-         <div class="button-container">
-            <button onclick="NextQuote()">Next</button>
-            <button onclick="previousQuote()">Previous</button>   
-         </div>
-
-<script src="script.js"></script>
-           
-   <!-- <button onclick="goTop()">⬆</button> -->
-
-</div>
-      </body>
+    <script src="script.js"></script>
+</body>
 </html>
